@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLT ET Revision</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMVIROPtCIDJcpcDTAOT9sWlLplmg7JYTT7GoqxSrg3odEIFG" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        xintegrity="sha384-n8MVd4RsNIU0KOVEMVIROPtCIDJcpcDTAOT9sWlLplmg7JYTT7GoqxSrg3odEIFG" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+        xintegrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8f9fa;
             color: #343a40;
         }
 
-        .katex { 
+        .katex {
             font-size: 1.2em !important;
             font-weight: 700 !important;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Inter', sans-serif;
             color: #212529;
             letter-spacing: -0.5px;
         }
-        
-        p, li {
+
+        p,
+        li {
             line-height: 1.8;
         }
 
@@ -48,11 +60,11 @@
             padding-left: 1rem;
             font-weight: 600;
         }
-        
+
         h4 {
             margin-top: 2.5rem;
         }
-        
+
         h5 {
             margin-top: 1.5rem;
             font-weight: 600;
@@ -66,6 +78,7 @@
             margin-bottom: 2.5rem;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
+
         .content-section:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -78,32 +91,45 @@
             border-radius: 0.375rem;
         }
 
-        .toc a:hover, .toc a.active {
+        .toc a:hover,
+        .toc a.active {
             background-color: #ede9fe;
             color: #5b21b6;
             transform: translateX(5px);
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .fade-in-section {
             animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
+
 <body class="antialiased text-base md:text-lg">
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <header class="text-center mb-12 md:mb-16 py-12 md:py-16 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-lg shadow-2xl text-white">
+        <header
+            class="text-center mb-12 md:mb-16 py-12 md:py-16 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-lg shadow-2xl text-white">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold">MLT ET Revision</h1>
-            <p class="text-lg md:text-xl text-indigo-100 mt-6 max-w-3xl mx-auto">An exhaustive reference of formulas, theories, and insights from all provided materials.</p>
+            <p class="text-lg md:text-xl text-indigo-100 mt-6 max-w-3xl mx-auto">An exhaustive reference of formulas,
+                theories, and insights from all provided materials.</p>
         </header>
 
         <!-- Mobile Nav Button -->
         <div class="lg:hidden text-center mb-8">
-            <button id="mobile-menu-button" class="bg-violet-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-violet-700 transition-colors w-full sm:w-auto">
+            <button id="mobile-menu-button"
+                class="bg-violet-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-violet-700 transition-colors w-full sm:w-auto">
                 Show Navigation
             </button>
         </div>
@@ -112,13 +138,15 @@
         <div id="mobile-menu" class="lg:hidden hidden bg-white p-6 rounded-lg shadow-lg mb-8 toc">
             <h2 class="text-2xl font-bold text-gray-800 !mt-0 !border-b-2 !border-indigo-200 pb-3 mb-4">Navigation</h2>
             <ul class="space-y-2 text-md">
-                <li><a href="#unsupervised" class="mobile-nav-link"><strong>Part 1:</strong> Unsupervised Learning</a></li>
+                <li><a href="#unsupervised" class="mobile-nav-link"><strong>Part 1:</strong> Unsupervised Learning</a>
+                </li>
                 <li><a href="#estimation" class="mobile-nav-link"><strong>Part 2:</strong> Parameter Estimation</a></li>
                 <li><a href="#supervised" class="mobile-nav-link"><strong>Part 3:</strong> Supervised Learning</a></li>
                 <li><a href="#ensemble" class="mobile-nav-link"><strong>Part 4:</strong> Ensemble Methods</a></li>
                 <li><a href="#concepts" class="mobile-nav-link"><strong>Part 5:</strong> Key Concepts</a></li>
                 <li><a href="#neural-networks" class="mobile-nav-link"><strong>Part 6:</strong> Neural Networks</a></li>
-                <li><a href="#visualization" class="mobile-nav-link"><strong>Part 7:</strong> Loss Function Graph</a></li>
+                <li><a href="#visualization" class="mobile-nav-link"><strong>Part 7:</strong> Loss Function Graph</a>
+                </li>
             </ul>
         </div>
 
@@ -126,7 +154,8 @@
             <!-- Table of Contents - Sticky Sidebar -->
             <aside class="lg:col-span-3 lg:sticky lg:top-8 self-start hidden lg:block">
                 <div class="toc bg-white p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold text-gray-800 !mt-0 !border-b-2 !border-indigo-200 pb-3 mb-4">Navigation</h2>
+                    <h2 class="text-2xl font-bold text-gray-800 !mt-0 !border-b-2 !border-indigo-200 pb-3 mb-4">
+                        Navigation</h2>
                     <ul class="space-y-2 text-md">
                         <li><a href="#unsupervised"><strong>Part 1:</strong> Unsupervised Learning</a></li>
                         <li><a href="#estimation"><strong>Part 2:</strong> Parameter Estimation</a></li>
@@ -144,67 +173,172 @@
                 <!-- Part 1: Unsupervised Learning -->
                 <section id="unsupervised" class="content-section fade-in-section p-6 md:p-8 lg:p-10">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Part 1: Unsupervised Learning</h2>
-                    
-                    <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">1. Principal Component Analysis (PCA)</h3>
+
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">1. Principal Component Analysis (PCA)
+                    </h3>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Notation Meaning</h4>
-                    <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-violet-50"><th class="p-3 border">Symbol</th><th class="p-3 border">Meaning</th></tr></thead><tbody><tr><td class="p-3 border">$$d, n$$</td><td class="p-3 border">Number of features, Number of data points</td></tr><tr><td class="p-3 border">$$x_i, \overline{x}$$</td><td class="p-3 border">i-th data point, Mean vector of dataset</td></tr><tr><td class="p-3 border">$$X$$</td><td class="p-3 border">Centered data matrix ($$d \times n$$)</td></tr><tr><td class="p-3 border">$$C$$</td><td class="p-3 border">Covariance matrix ($$d \times d$$)</td></tr><tr><td class="p-3 border">$$K$$</td><td class="p-3 border">Gram matrix ($$n \times n$$)</td></tr><tr><td class="p-3 border">$$w_j, \lambda_j$$</td><td class="p-3 border">j-th Principal Component (eigenvector of C), j-th eigenvalue</td></tr></tbody></table></div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-violet-50">
+                                    <th class="p-3 border">Symbol</th>
+                                    <th class="p-3 border">Meaning</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-3 border">$$d, n$$</td>
+                                    <td class="p-3 border">Number of features, Number of data points</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border">$$x_i, \overline{x}$$</td>
+                                    <td class="p-3 border">i-th data point, Mean vector of dataset</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border">$$X$$</td>
+                                    <td class="p-3 border">Centered data matrix ($$d \times n$$)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border">$$C$$</td>
+                                    <td class="p-3 border">Covariance matrix ($$d \times d$$)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border">$$K$$</td>
+                                    <td class="p-3 border">Gram matrix ($$n \times n$$)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border">$$w_j, \lambda_j$$</td>
+                                    <td class="p-3 border">j-th Principal Component (eigenvector of C), j-th eigenvalue
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Core Formulas</h4>
                     <ul class="space-y-8">
-                        <li><strong>Centering:</strong><div class="text-center mt-2">$$x_{i}' = x_{i} - \overline{x}$$, where $$\\overline{x} = \frac{1}{n}\sum_{i=1}^{n}x_{i}$$</div></li>
-                        <li><strong>Covariance Matrix:</strong><div class="text-center mt-2">$$C = \frac{1}{n}XX^T$$</div></li>
-                        <li><strong>Gram Matrix:</strong><div class="text-center mt-2">$$K = X^T X$$</div></li>
-                        <li><strong>PC Recovery from Gram Matrix:</strong><div class="text-center mt-2">$$w_j = \frac{X v_j}{\sqrt{\lambda_j}}$$</div></li>
-                        <li><strong>Variance Maximization:</strong><div class="text-center mt-2">$$\max_{w: ||w||=1} w^T C w = \lambda_1$$</div></li>
-                        <li><strong>Projection:</strong><div class="text-center mt-2">$$X' = W^T X$$</div></li>
-                        <li><strong>Reconstruction:</strong><div class="text-center mt-2">$$X_{recon} = WW^T X$$</div></li>
-                        <li><strong>Reconstruction Error:</strong><div class="text-center mt-2">$$\frac{1}{n}\sum||x_i - x_{i,recon}||^2 = \sum_{j=k+1}^{d}\lambda_j$$</div></li>
-                        <li><strong>Total Variance:</strong><div class="text-center mt-2">$$\text{Trace}(C) = \sum_{j=1}^{d}\lambda_j$$</div></li>
-                        <li><strong>Proportion of Variance Captured:</strong><div class="text-center mt-2">$$\frac{\sum_{j=1}^{k}\lambda_j}{\sum_{j=1}^{d}\lambda_j}$$</div></li>
+                        <li><strong>Centering:</strong>
+                            <div class="text-center mt-2">$$x_{i}' = x_{i} - \overline{x}$$, where $$\\overline{x} =
+                                \frac{1}{n}\sum_{i=1}^{n}x_{i}$$</div>
+                        </li>
+                        <li><strong>Covariance Matrix:</strong>
+                            <div class="text-center mt-2">$$C = \frac{1}{n}XX^T$$</div>
+                        </li>
+                        <li><strong>Gram Matrix:</strong>
+                            <div class="text-center mt-2">$$K = X^T X$$</div>
+                        </li>
+                        <li><strong>PC Recovery from Gram Matrix:</strong>
+                            <div class="text-center mt-2">$$w_j = \frac{X v_j}{\sqrt{\lambda_j}}$$</div>
+                        </li>
+                        <li><strong>Variance Maximization:</strong>
+                            <div class="text-center mt-2">$$\max_{w: ||w||=1} w^T C w = \lambda_1$$</div>
+                        </li>
+                        <li><strong>Projection:</strong>
+                            <div class="text-center mt-2">$$X' = W^T X$$</div>
+                        </li>
+                        <li><strong>Reconstruction:</strong>
+                            <div class="text-center mt-2">$$X_{recon} = WW^T X$$</div>
+                        </li>
+                        <li><strong>Reconstruction Error:</strong>
+                            <div class="text-center mt-2">$$\frac{1}{n}\sum||x_i - x_{i,recon}||^2 =
+                                \sum_{j=k+1}^{d}\lambda_j$$</div>
+                        </li>
+                        <li><strong>Total Variance:</strong>
+                            <div class="text-center mt-2">$$\text{Trace}(C) = \sum_{j=1}^{d}\lambda_j$$</div>
+                        </li>
+                        <li><strong>Proportion of Variance Captured:</strong>
+                            <div class="text-center mt-2">$$\frac{\sum_{j=1}^{k}\lambda_j}{\sum_{j=1}^{d}\lambda_j}$$
+                            </div>
+                        </li>
                     </ul>
 
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">2. K-Means Clustering</h3>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Objective Function (WCSS)</h4>
                     <ul class="space-y-8">
-                        <li><strong>Minimize:</strong><div class="text-center mt-2">$$J = \sum_{k=1}^{K} \sum_{i \text{ in cluster } k} ||x_{i} - \mu_{k}||^2$$</div></li>
+                        <li><strong>Minimize:</strong>
+                            <div class="text-center mt-2">$$J = \sum_{k=1}^{K} \sum_{i \text{ in cluster } k} ||x_{i} -
+                                \mu_{k}||^2$$</div>
+                        </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Lloyd's Algorithm Formulas</h4>
-                     <ul class="space-y-8">
-                        <li><strong>Assignment Step:</strong><div class="text-center mt-2">$$z_i^{(t+1)} = \arg\min_k ||x_i - \mu_k^{(t)}||^2$$</div></li>
-                        <li><strong>Update Step (Mean):</strong><div class="text-center mt-2">$$\mu_k^{(t+1)} = \frac{\sum_{i=1}^{n} I(z_i^{(t+1)}=k) \cdot x_i}{\sum_{i=1}^{n} I(z_i^{(t+1)}=k)}$$</div></li>
+                    <ul class="space-y-8">
+                        <li><strong>Assignment Step:</strong>
+                            <div class="text-center mt-2">$$z_i^{(t+1)} = \arg\min_k ||x_i - \mu_k^{(t)}||^2$$</div>
+                        </li>
+                        <li><strong>Update Step (Mean):</strong>
+                            <div class="text-center mt-2">$$\mu_k^{(t+1)} = \frac{\sum_{i=1}^{n} I(z_i^{(t+1)}=k) \cdot
+                                x_i}{\sum_{i=1}^{n} I(z_i^{(t+1)}=k)}$$</div>
+                        </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">K-Means++ Initialization Formula</h4>
                     <ul class="space-y-8">
-                        <li><strong>Probability to be chosen as next center:</strong><div class="text-center mt-2">$$P(x_i) = \frac{D(x_i)^2}{\sum_{j=1}^{n} D(x_j)^2}$$</div><p class="text-center text-sm mt-2">where $$D(x_i)$$ is the distance from data point $$x_i$$ to the nearest existing center.</p></li>
+                        <li><strong>Probability to be chosen as next center:</strong>
+                            <div class="text-center mt-2">$$P(x_i) = \frac{D(x_i)^2}{\sum_{j=1}^{n} D(x_j)^2}$$</div>
+                            <p class="text-center text-sm mt-2">where $$D(x_i)$$ is the distance from data point $$x_i$$
+                                to the nearest existing center.</p>
+                        </li>
                     </ul>
 
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">3. Gaussian Mixture Models (GMM)</h3>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Core Formulas</h4>
                     <ul class="space-y-8">
-                        <li><strong>Probability Density Function (PDF):</strong><div class="text-center mt-2">$$f(x;\theta)=\sum_{k=1}^{K}\pi_{k}\mathcal{N}(x;\mu_{k},\Sigma_{k})$$</div></li>
-                        <li><strong>E-Step (Responsibilities):</strong><div class="text-center mt-2">$$\lambda_k^i = P(z_i=k | x_i; \theta) = \frac{\pi_k \mathcal{N}(x_i | \mu_k, \Sigma_k)}{\sum_{j=1}^{K} \pi_j \mathcal{N}(x_i | \mu_j, \Sigma_j)}$$</div></li>
-                        <li><strong>M-Step (Update Mixture Weight):</strong><div class="text-center mt-2">$$\pi_k^{new} = \frac{N_k}{n}$$ where $$N_k = \sum_{i=1}^{n} \lambda_k^i$$</div></li>
-                        <li><strong>M-Step (Update Mean):</strong><div class="text-center mt-2">$$\mu_k^{new} = \frac{1}{N_k} \sum_{i=1}^{n} \lambda_k^i x_i$$</div></li>
-                        <li><strong>M-Step (Update Covariance):</strong><div class="text-center mt-2">$$\Sigma_k^{new} = \frac{1}{N_k} \sum_{i=1}^{n} \lambda_k^i (x_i - \mu_k^{new})(x_i - \mu_k^{new})^T$$</div></li>
+                        <li><strong>Probability Density Function (PDF):</strong>
+                            <div class="text-center mt-2">
+                                $$f(x;\theta)=\sum_{k=1}^{K}\pi_{k}\mathcal{N}(x;\mu_{k},\Sigma_{k})$$</div>
+                        </li>
+                        <li><strong>E-Step (Responsibilities):</strong>
+                            <div class="text-center mt-2">$$\lambda_k^i = P(z_i=k | x_i; \theta) = \frac{\pi_k
+                                \mathcal{N}(x_i | \mu_k, \Sigma_k)}{\sum_{j=1}^{K} \pi_j \mathcal{N}(x_i | \mu_j,
+                                \Sigma_j)}$$</div>
+                        </li>
+                        <li><strong>M-Step (Update Mixture Weight):</strong>
+                            <div class="text-center mt-2">$$\pi_k^{new} = \frac{N_k}{n}$$ where $$N_k = \sum_{i=1}^{n}
+                                \lambda_k^i$$</div>
+                        </li>
+                        <li><strong>M-Step (Update Mean):</strong>
+                            <div class="text-center mt-2">$$\mu_k^{new} = \frac{1}{N_k} \sum_{i=1}^{n} \lambda_k^i x_i$$
+                            </div>
+                        </li>
+                        <li><strong>M-Step (Update Covariance):</strong>
+                            <div class="text-center mt-2">$$\Sigma_k^{new} = \frac{1}{N_k} \sum_{i=1}^{n} \lambda_k^i
+                                (x_i - \mu_k^{new})(x_i - \mu_k^{new})^T$$</div>
+                        </li>
                     </ul>
                 </section>
 
                 <!-- Part 2: Parameter Estimation -->
                 <section id="estimation" class="content-section fade-in-section p-6 md:p-8 lg:p-10">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Part 2: Parameter Estimation</h2>
-                    <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">4. MLE and Bayesian (MAP) Estimation</h3>
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">4. MLE and Bayesian (MAP) Estimation
+                    </h3>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Maximum Likelihood Estimation (MLE)</h4>
                     <ul class="space-y-8">
-                        <li><strong>Likelihood:</strong><div class="text-center mt-2">$$L(\theta; D) = \prod_{i=1}^{n} P(x_i; \theta)$$</div></li>
-                        <li><strong>Log-Likelihood:</strong><div class="text-center mt-2">$$l(\theta; D) = \sum_{i=1}^{n} \log P(x_i; \theta)$$</div></li>
-                        <li><strong>MLE for Bernoulli:</strong><div class="text-center mt-2">$$\hat{p}_{MLE} = \frac{n_h}{n_h + n_t}$$</div></li>
+                        <li><strong>Likelihood:</strong>
+                            <div class="text-center mt-2">$$L(\theta; D) = \prod_{i=1}^{n} P(x_i; \theta)$$</div>
+                        </li>
+                        <li><strong>Log-Likelihood:</strong>
+                            <div class="text-center mt-2">$$l(\theta; D) = \sum_{i=1}^{n} \log P(x_i; \theta)$$</div>
+                        </li>
+                        <li><strong>MLE for Bernoulli:</strong>
+                            <div class="text-center mt-2">$$\hat{p}_{MLE} = \frac{n_h}{n_h + n_t}$$</div>
+                        </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Bayesian Estimation (MAP)</h4>
                     <ul class="space-y-8">
-                        <li><strong>Bayes' Theorem for Parameters:</strong><div class="text-center mt-2">$$P(\theta|D) \propto P(D|\theta)P(\theta)$$</div></li>
-                        <li><strong>Posterior for Bernoulli (Beta Prior):</strong><div class="text-center mt-2">$$P(p|D) = \text{Beta}(\alpha + n_h, \beta + n_t)$$</div></li>
-                        <li><strong>Posterior Mean:</strong><div class="text-center mt-2">$$E[p|D] = \frac{\alpha + n_h}{\alpha + \beta + n_h + n_t}$$</div></li>
-                        <li><strong>MAP for Bernoulli (Beta Prior):</strong><div class="text-center mt-2">$$\hat{p}_{MAP} = \frac{\alpha + n_h - 1}{\alpha + \beta + n_h + n_t - 2}$$</div></li>
+                        <li><strong>Bayes' Theorem for Parameters:</strong>
+                            <div class="text-center mt-2">$$P(\theta|D) \propto P(D|\theta)P(\theta)$$</div>
+                        </li>
+                        <li><strong>Posterior for Bernoulli (Beta Prior):</strong>
+                            <div class="text-center mt-2">$$P(p|D) = \text{Beta}(\alpha + n_h, \beta + n_t)$$</div>
+                        </li>
+                        <li><strong>Posterior Mean:</strong>
+                            <div class="text-center mt-2">$$E[p|D] = \frac{\alpha + n_h}{\alpha + \beta + n_h + n_t}$$
+                            </div>
+                        </li>
+                        <li><strong>MAP for Bernoulli (Beta Prior):</strong>
+                            <div class="text-center mt-2">$$\hat{p}_{MAP} = \frac{\alpha + n_h - 1}{\alpha + \beta + n_h
+                                + n_t - 2}$$</div>
+                        </li>
                         <li><strong>Key Point:</strong>
                             <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-sm">
                                 <li>✅ <strong>MAP estimate equals MLE if the prior is uniform.</strong></li>
@@ -219,33 +353,91 @@
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">5. Regression Models</h3>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Linear Regression</h4>
                     <ul class="space-y-8">
-                        <li><strong>Model:</strong><div class="text-center mt-2">$$\hat{y} = w^T x + b$$</div></li>
-                        <li><strong>Loss (SSE):</strong><div class="text-center mt-2">$$L(w) = \frac{1}{2} ||X^T w - y||^2$$</div></li>
-                        <li><strong>Gradient of SSE:</strong><div class="text-center mt-2">$$\nabla_w L(w) = XX^T w - Xy$$</div></li>
-                        <li><strong>Normal Equations (Solution):</strong><div class="text-center mt-2">$$\hat{w} = (XX^T)^{-1}Xy$$</div></li>
+                        <li><strong>Model:</strong>
+                            <div class="text-center mt-2">$$\hat{y} = w^T x + b$$</div>
+                        </li>
+                        <li><strong>Loss (SSE):</strong>
+                            <div class="text-center mt-2">$$L(w) = \frac{1}{2} ||X^T w - y||^2$$</div>
+                        </li>
+                        <li><strong>Gradient of SSE:</strong>
+                            <div class="text-center mt-2">$$\nabla_w L(w) = XX^T w - Xy$$</div>
+                        </li>
+                        <li><strong>Normal Equations (Solution):</strong>
+                            <div class="text-center mt-2">$$\hat{w} = (XX^T)^{-1}Xy$$</div>
+                        </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Regularization</h4>
                     <ul class="space-y-8">
-                        <li><strong>Ridge (L2) Loss:</strong><div class="text-center mt-2">$$L_{ridge}(w) = \text{SSE} + \frac{\lambda}{2} ||w||_2^2$$</div></li>
-                        <li><strong>Ridge Solution:</strong><div class="text-center mt-2">$$\hat{w}_{ridge} = (XX^T + \lambda I)^{-1}Xy$$</div></li>
-                        <li><strong>LASSO (L1) Loss:</strong><div class="text-center mt-2">$$L_{LASSO}(w) = \text{SSE} + \lambda ||w||_1$$</div></li>
+                        <li><strong>Ridge (L2) Loss:</strong>
+                            <div class="text-center mt-2">$$L_{ridge}(w) = \text{SSE} + \frac{\lambda}{2} ||w||_2^2$$
+                            </div>
+                        </li>
+                        <li><strong>Ridge Solution:</strong>
+                            <div class="text-center mt-2">$$\hat{w}_{ridge} = (XX^T + \lambda I)^{-1}Xy$$</div>
+                        </li>
+                        <li><strong>LASSO (L1) Loss:</strong>
+                            <div class="text-center mt-2">$$L_{LASSO}(w) = \text{SSE} + \lambda ||w||_1$$</div>
+                        </li>
                     </ul>
 
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">6. Classification Models</h3>
-                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Loss Functions Table</h4>
-                     <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-violet-50"><th class="p-3 border">Loss</th><th class="p-3 border">Formula L(u)</th><th class="p-3 border">Classifier</th></tr></thead><tbody><tr class="odd:bg-gray-50"><td class="p-3 border">0-1 Loss</td><td class="p-3 border">$$\mathbb{I}[u < 0]$$</td><td class="p-3 border">Ideal (Theoretical)</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Squared Loss</td><td class="p-3 border">$$(u-1)^2$$</td><td class="p-3 border">Least Squares</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Hinge Loss</td><td class="p-3 border">$$\max(0, 1-u)$$</td><td class="p-3 border">SVM</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Logistic Loss</td><td class="p-3 border">$$\log(1+e^{-u})$$</td><td class="p-3 border">Logistic Regression</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Perceptron Loss</td><td class="p-3 border">$$\max(0, -u)$$</td><td class="p-3 border">Perceptron</td></tr></tbody></table></div>
-                     <ul class="space-y-4 mt-4">
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Loss Functions Table</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-violet-50">
+                                    <th class="p-3 border">Loss</th>
+                                    <th class="p-3 border">Formula L(u)</th>
+                                    <th class="p-3 border">Classifier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">0-1 Loss</td>
+                                    <td class="p-3 border">$$\mathbb{I}[u < 0]$$</td>
+                                    <td class="p-3 border">Ideal (Theoretical)</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Squared Loss</td>
+                                    <td class="p-3 border">$$(u-1)^2$$</td>
+                                    <td class="p-3 border">Least Squares</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Hinge Loss</td>
+                                    <td class="p-3 border">$$\max(0, 1-u)$$</td>
+                                    <td class="p-3 border">SVM</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Logistic Loss</td>
+                                    <td class="p-3 border">$$\log(1+e^{-u})$$</td>
+                                    <td class="p-3 border">Logistic Regression</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Perceptron Loss</td>
+                                    <td class="p-3 border">$$\max(0, -u)$$</td>
+                                    <td class="p-3 border">Perceptron</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="space-y-4 mt-4">
                         <li><strong>Key Intersection Point:</strong>
                             <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-sm">
-                                <li>The logistic loss and the (SVM) hinge loss intersect when $$(w^T x)y = \ln(e-1)$$.</li>
+                                <li>The logistic loss and the (SVM) hinge loss intersect when $$(w^T x)y = \ln(e-1)$$.
+                                </li>
                             </ul>
                         </li>
-                     </ul>
-                     
-                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Decision Trees</h4>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Decision Trees</h4>
                     <ul class="space-y-8">
-                        <li><strong>Entropy (Binary):</strong><div class="text-center mt-2">$$E(p) = -p \log_2(p) - (1-p) \log_2(1-p)$$</div></li>
-                        <li><strong>Information Gain (IG):</strong><div class="text-center mt-2">$$IG = E_{parent} - [\gamma E_{left} + (1-\gamma) E_{right}]$$</div></li>
+                        <li><strong>Entropy (Binary):</strong>
+                            <div class="text-center mt-2">$$E(p) = -p \log_2(p) - (1-p) \log_2(1-p)$$</div>
+                        </li>
+                        <li><strong>Information Gain (IG):</strong>
+                            <div class="text-center mt-2">$$IG = E_{parent} - [\gamma E_{left} + (1-\gamma) E_{right}]$$
+                            </div>
+                        </li>
                         <li><strong>Key Points:</strong>
                             <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-sm">
                                 <li><strong>Entropy = 0:</strong> Pure node (all samples belong to the same class).</li>
@@ -257,100 +449,347 @@
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Perceptron Algorithm</h4>
                     <ul class="space-y-8">
-                        <li><strong>Model:</strong><div class="text-center mt-2">$$\hat{y} = \text{sign}(w^T x)$$</div></li>
-                        <li><strong>Update Rule:</strong><div class="text-center mt-2">If $$y_i(w^T x_i) \le 0$$, then $$w \leftarrow w + y_i x_i$$</div></li>
-                        <li><strong>Radius (R):</strong><div class="text-center mt-2">$$R = \max_i ||x_i||$$</div></li>
-                        <li class="text-sm">The maximum Euclidean norm of any data point. Think of it as the "size of the largest input vector."</li>
-                        <li><strong>Margin (γ):</strong><div class="text-center mt-2">$$\gamma = \min_i \frac{y_i(w^T x_i)}{||w||}$$</div></li>
-                        <li class="text-sm">The minimum distance of any point from the separating hyperplane. Intuitively, it's how well-separated the two classes are. Larger γ → fewer mistakes.</li>
-                        <li><strong>Mistake Bound:</strong><div class="text-center mt-2">$$t \le \left(\frac{R}{\gamma}\right)^2$$</div></li>
+                        <li><strong>Model:</strong>
+                            <div class="text-center mt-2">$$\hat{y} = \text{sign}(w^T x)$$</div>
+                        </li>
+                        <li><strong>Update Rule:</strong>
+                            <div class="text-center mt-2">If $$y_i(w^T x_i) \le 0$$, then $$w \leftarrow w + y_i x_i$$
+                            </div>
+                        </li>
+                        <li><strong>Radius (R):</strong>
+                            <div class="text-center mt-2">$$R = \max_i ||x_i||$$</div>
+                        </li>
+                        <li class="text-sm">The maximum Euclidean norm of any data point. Think of it as the "size of
+                            the largest input vector."</li>
+                        <li><strong>Margin (γ):</strong>
+                            <div class="text-center mt-2">$$\gamma = \min_i \frac{y_i(w^T x_i)}{||w||}$$</div>
+                        </li>
+                        <li class="text-sm">The minimum distance of any point from the separating hyperplane.
+                            Intuitively, it's how well-separated the two classes are. Larger γ → fewer mistakes.</li>
+                        <li><strong>Mistake Bound:</strong>
+                            <div class="text-center mt-2">$$t \le \left(\frac{R}{\gamma}\right)^2$$</div>
+                        </li>
                         <li><strong>Key Point:</strong>
                             <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-sm">
-                                <li>The weight vector output by the perceptron algorithm can be expressed as a linear combination of the data-points where the coefficients of the linear combination are integers.</li>
+                                <li>The weight vector output by the perceptron algorithm can be expressed as a linear
+                                    combination of the data-points where the coefficients of the linear combination are
+                                    integers.</li>
                             </ul>
                         </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Support Vector Machines (SVM)</h4>
                     <ul class="space-y-8">
-                        <li><strong>Geometric Margin:</strong><div class="text-center mt-2">$$\gamma_i = \frac{y_i(w^T x_i + b)}{||w||}$$</div></li>
-                        <li><strong>Hard-Margin Primal:</strong><div class="text-center mt-2">$$\min_w \frac{1}{2}||w||^2 \quad \text{s.t.} \quad y_i(w^T x_i + b) \ge 1$$</div></li>
-                        <li><strong>Soft-Margin Primal:</strong><div class="text-center mt-2">$$\min_{w, \xi} \frac{1}{2}||w||^2 + C \sum \xi_i \quad \text{s.t.} \quad y_i(w^T x_i + b) \ge 1 - \xi_i, \xi_i \ge 0$$</div></li>
-                        <li><strong>Dual Objective:</strong><div class="text-center mt-2">$$\max_{0 \le \alpha_i \le C} \sum \alpha_i - \frac{1}{2} \sum_i \sum_j \alpha_i \alpha_j y_i y_j k(x_i, x_j)$$</div></li>
-                        <li><strong>Weight Vector from Dual:</strong><div class="text-center mt-2">$$w^* = \sum_{i=1}^{n} \alpha_i^* y_i x_i$$</div></li>
-                        <li><strong>Prediction with Kernels:</strong><div class="text-center mt-2">$$\hat{y}_{test} = \text{sign}\left(\sum_{i \in SVs} \alpha_i^* y_i k(x_i, x_{test}) + b\right)$$</div></li>
-                        <li><strong>Total Margin Width:</strong><div class="text-center mt-2">$$\text{Total Margin} = \frac{2}{||w||}$$</div></li>
+                        <li><strong>Geometric Margin:</strong>
+                            <div class="text-center mt-2">$$\gamma_i = \frac{y_i(w^T x_i + b)}{||w||}$$</div>
+                        </li>
+                        <li><strong>Hard-Margin Primal:</strong>
+                            <div class="text-center mt-2">$$\min_w \frac{1}{2}||w||^2 \quad \text{s.t.} \quad y_i(w^T
+                                x_i + b) \ge 1$$</div>
+                        </li>
+                        <li><strong>Soft-Margin Primal:</strong>
+                            <div class="text-center mt-2">$$\min_{w, \xi} \frac{1}{2}||w||^2 + C \sum \xi_i \quad
+                                \text{s.t.} \quad y_i(w^T x_i + b) \ge 1 - \xi_i, \xi_i \ge 0$$</div>
+                        </li>
+                        <li><strong>Dual Objective:</strong>
+                            <div class="text-center mt-2">$$\max_{0 \le \alpha_i \le C} \sum \alpha_i - \frac{1}{2}
+                                \sum_i \sum_j \alpha_i \alpha_j y_i y_j k(x_i, x_j)$$</div>
+                        </li>
+                        <li><strong>Weight Vector from Dual:</strong>
+                            <div class="text-center mt-2">$$w^* = \sum_{i=1}^{n} \alpha_i^* y_i x_i$$</div>
+                        </li>
+                        <li><strong>Prediction with Kernels:</strong>
+                            <div class="text-center mt-2">$$\hat{y}_{test} = \text{sign}\left(\sum_{i \in SVs}
+                                \alpha_i^* y_i k(x_i, x_{test}) + b\right)$$</div>
+                        </li>
+                        <li><strong>Total Margin Width:</strong>
+                            <div class="text-center mt-2">$$\text{Total Margin} = \frac{2}{||w||}$$</div>
+                        </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Key KKT Conditions for SVM</h4>
                     <ul class="space-y-8">
-                        <li><strong>Stationarity Condition:</strong><div class="text-center mt-2">$$\alpha_i + \beta_i = C, \quad \alpha_i, \beta_i \ge 0$$</div></li>
-                        <li><strong>Complementary Slackness:</strong><div class="text-center mt-2">$$\alpha_i(1 - \xi_i - m_i) = 0, \quad \beta_i \xi_i = 0$$</div></li>
+                        <li><strong>Stationarity Condition:</strong>
+                            <div class="text-center mt-2">$$\alpha_i + \beta_i = C, \quad \alpha_i, \beta_i \ge 0$$
+                            </div>
+                        </li>
+                        <li><strong>Complementary Slackness:</strong>
+                            <div class="text-center mt-2">$$\alpha_i(1 - \xi_i - m_i) = 0, \quad \beta_i \xi_i = 0$$
+                            </div>
+                        </li>
                         <li><strong>Implications:</strong>
                             <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-sm">
                                 <li>$$\alpha_i = 0 \implies m_i > 1, \xi_i = 0$$ (outside margin, correct).</li>
-                                <li>$$0 < \alpha_i < C \implies m_i = 1, \xi_i = 0$$ (on margin).</li>
-                                <li>$$\alpha_i = C \implies \beta_i = 0, \xi_i > 0$$ (inside margin or misclassified).</li>
+                                <li>$$0 < \alpha_i < C \implies m_i=1, \xi_i=0$$ (on margin).</li>
+                                <li>$$\alpha_i = C \implies \beta_i = 0, \xi_i > 0$$ (inside margin or misclassified).
+                                </li>
                                 <li>$$\xi_i > 1 \implies$$ misclassified.</li>
                             </ul>
                         </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Soft-Margin SVM Case Table</h4>
-                    <p class="mb-4 text-sm">Where the margin value is defined as: $$m_i = y_i(\mathbf{w}^\top \mathbf{x}_i+b)$$</p>
-                    <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-violet-50"><th class="p-3 border">Case (Position)</th><th class="p-3 border">Margin Value $$m_i$$</th><th class="p-3 border">Slack $$\xi_i$$</th><th class="p-3 border">Dual $$\alpha_i$$</th><th class="p-3 border">Support Vector?</th><th class="p-3 border">Classification</th></tr></thead><tbody><tr class="odd:bg-gray-50"><td class="p-3 border">Outside margin</td><td class="p-3 border">$$m_i > 1$$</td><td class="p-3 border">0</td><td class="p-3 border">0</td><td class="p-3 border">No</td><td class="p-3 border">Correctly classified</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">On margin</td><td class="p-3 border">$$m_i = 1$$</td><td class="p-3 border">0</td><td class="p-3 border">$$0 < \alpha_i < C$$</td><td class="p-3 border">Yes</td><td class="p-3 border">Correctly classified</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Inside margin</td><td class="p-3 border">$$0 < m_i < 1$$</td><td class="p-3 border">$$1 - m_i$$</td><td class="p-3 border">C</td><td class="p-3 border">Yes</td><td class="p-3 border">Correctly classified</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">On decision boundary</td><td class="p-3 border">$$m_i = 0$$</td><td class="p-3 border">1</td><td class="p-3 border">C</td><td class="p-3 border">Yes</td><td class="p-3 border">Edge case</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Misclassified point</td><td class="p-3 border">$$m_i < 0$$</td><td class="p-3 border">$$> 1$$</td><td class="p-3 border">C</td><td class="p-3 border">Yes</td><td class="p-3 border">Incorrectly classified</td></tr></tbody></table></div>
+                    <p class="mb-4 text-sm">Where the margin value is defined as: $$m_i = y_i(\mathbf{w}^\top
+                        \mathbf{x}_i+b)$$</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-violet-50">
+                                    <th class="p-3 border">Case (Position)</th>
+                                    <th class="p-3 border">Margin Value $$m_i$$</th>
+                                    <th class="p-3 border">Slack $$\xi_i$$</th>
+                                    <th class="p-3 border">Dual $$\alpha_i$$</th>
+                                    <th class="p-3 border">Support Vector?</th>
+                                    <th class="p-3 border">Classification</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Outside margin</td>
+                                    <td class="p-3 border">$$m_i > 1$$</td>
+                                    <td class="p-3 border">0</td>
+                                    <td class="p-3 border">0</td>
+                                    <td class="p-3 border">No</td>
+                                    <td class="p-3 border">Correctly classified</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">On margin</td>
+                                    <td class="p-3 border">$$m_i = 1$$</td>
+                                    <td class="p-3 border">0</td>
+                                    <td class="p-3 border">$$0 < \alpha_i < C$$</td>
+                                    <td class="p-3 border">Yes</td>
+                                    <td class="p-3 border">Correctly classified</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Inside margin</td>
+                                    <td class="p-3 border">$$0 < m_i < 1$$</td>
+                                    <td class="p-3 border">$$1 - m_i$$</td>
+                                    <td class="p-3 border">C</td>
+                                    <td class="p-3 border">Yes</td>
+                                    <td class="p-3 border">Correctly classified</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">On decision boundary</td>
+                                    <td class="p-3 border">$$m_i = 0$$</td>
+                                    <td class="p-3 border">1</td>
+                                    <td class="p-3 border">C</td>
+                                    <td class="p-3 border">Yes</td>
+                                    <td class="p-3 border">Edge case</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Misclassified point</td>
+                                    <td class="p-3 border">$$m_i < 0$$</td>
+                                    <td class="p-3 border">$$> 1$$</td>
+                                    <td class="p-3 border">C</td>
+                                    <td class="p-3 border">Yes</td>
+                                    <td class="p-3 border">Incorrectly classified</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Effect of C in Soft Margin SVM</h4>
-                    <p class="mb-4">The parameter C controls the trade-off between having a wide margin and correctly classifying training points. It's a way to manage the bias-variance tradeoff.</p>
-                    <ul><li>C = penalty parameter on misclassification</li></ul>
-                    <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-violet-50"><th class="p-3 border">Parameter</th><th class="p-3 border">Small C (Low Penalty)</th><th class="p-3 border">Large C (High Penalty)</th></tr></thead><tbody><tr class="odd:bg-gray-50"><td class="p-3 border">Penalty on misclassification</td><td class="p-3 border">Low → mistakes allowed</td><td class="p-3 border">High → mistakes not allowed</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Margin size</td><td class="p-3 border">Wide margin</td><td class="p-3 border">Narrow margin</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Bias-Variance tradeoff</td><td class="p-3 border">High bias, low variance (underfit)</td><td class="p-3 border">Low bias, high variance (overfit)</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Tolerance to outliers</td><td class="p-3 border">Ignores some outliers (robust)</td><td class="p-3 border">Sensitive to outliers (tries to fit them)</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Generalization</td><td class="p-3 border">Better generalization</td><td class="p-3 border">Risk of poor generalization</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Decision boundary</td><td class="p-3 border">Simpler, smoother</td><td class="p-3 border">Complex, may twist to fit data</td></tr></tbody></table></div>
+                    <p class="mb-4">The parameter C controls the trade-off between having a wide margin and correctly
+                        classifying training points. It's a way to manage the bias-variance tradeoff.</p>
+                    <ul>
+                        <li>C = penalty parameter on misclassification</li>
+                    </ul>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-violet-50">
+                                    <th class="p-3 border">Parameter</th>
+                                    <th class="p-3 border">Small C (Low Penalty)</th>
+                                    <th class="p-3 border">Large C (High Penalty)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Penalty on misclassification</td>
+                                    <td class="p-3 border">Low → mistakes allowed</td>
+                                    <td class="p-3 border">High → mistakes not allowed</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Margin size</td>
+                                    <td class="p-3 border">Wide margin</td>
+                                    <td class="p-3 border">Narrow margin</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Bias-Variance tradeoff</td>
+                                    <td class="p-3 border">High bias, low variance (underfit)</td>
+                                    <td class="p-3 border">Low bias, high variance (overfit)</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Tolerance to outliers</td>
+                                    <td class="p-3 border">Ignores some outliers (robust)</td>
+                                    <td class="p-3 border">Sensitive to outliers (tries to fit them)</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Generalization</td>
+                                    <td class="p-3 border">Better generalization</td>
+                                    <td class="p-3 border">Risk of poor generalization</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Decision boundary</td>
+                                    <td class="p-3 border">Simpler, smoother</td>
+                                    <td class="p-3 border">Complex, may twist to fit data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Model Summary & Gradients</h4>
-                    <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-violet-50"><th class="p-3 border">Model/Layer</th><th class="p-3 border">Prediction $$\hat{y}$$</th><th class="p-3 border">Loss</th><th class="p-3 border">Gradient</th><th class="p-3 border">Intuition</th></tr></thead><tbody><tr class="odd:bg-gray-50"><td class="p-3 border">Linear Regression</td><td class="p-3 border">$$w^T x$$</td><td class="p-3 border">$$\frac{1}{2}(y-\hat{y})^2$$</td><td class="p-3 border">$$(\hat{y}-y)x$$</td><td class="p-3 border">Predicts a continuous value; minimizes squared error.</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Logistic Regression (Binary)</td><td class="p-3 border">$$\sigma(w^T x)$$</td><td class="p-3 border">$$-[y\log(\hat{y}) + (1-y)\log(1-\hat{y})]$$</td><td class="p-3 border">$$(\hat{y}-y)x$$</td><td class="p-3 border">Predicts a probability for Yes/No outcomes.</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Softmax Regression (Multi-class)</td><td class="p-3 border">$$\text{softmax}(W^T x)$$</td><td class="p-3 border">$$-\sum_k y_k \log \hat{y}_k$$</td><td class="p-3 border">$$x(\hat{y}-y)^T$$</td><td class="p-3 border">Generalizes logistic regression for more than two classes.</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">NN Hidden Layer (Backprop)</td><td class="p-3 border">$$a^{(l)} = f(W^{(l)}a^{(l-1)})$$</td><td class="p-3 border">(From Chain Rule)</td><td class="p-3 border">$$\delta^{(l)}(a^{(l-1)})^T$$</td><td class="p-3 border">Calculates intermediate features; gradient comes from later layers.</td></tr></tbody></table></div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-violet-50">
+                                    <th class="p-3 border">Model/Layer</th>
+                                    <th class="p-3 border">Prediction $$\hat{y}$$</th>
+                                    <th class="p-3 border">Loss</th>
+                                    <th class="p-3 border">Gradient</th>
+                                    <th class="p-3 border">Intuition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Linear Regression</td>
+                                    <td class="p-3 border">$$w^T x$$</td>
+                                    <td class="p-3 border">$$\frac{1}{2}(y-\hat{y})^2$$</td>
+                                    <td class="p-3 border">$$(\hat{y}-y)x$$</td>
+                                    <td class="p-3 border">Predicts a continuous value; minimizes squared error.</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Logistic Regression (Binary)</td>
+                                    <td class="p-3 border">$$\sigma(w^T x)$$</td>
+                                    <td class="p-3 border">$$-[y\log(\hat{y}) + (1-y)\log(1-\hat{y})]$$</td>
+                                    <td class="p-3 border">$$(\hat{y}-y)x$$</td>
+                                    <td class="p-3 border">Predicts a probability for Yes/No outcomes.</td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">Softmax Regression (Multi-class)</td>
+                                    <td class="p-3 border">$$\text{softmax}(W^T x)$$</td>
+                                    <td class="p-3 border">$$-\sum_k y_k \log \hat{y}_k$$</td>
+                                    <td class="p-3 border">$$x(\hat{y}-y)^T$$</td>
+                                    <td class="p-3 border">Generalizes logistic regression for more than two classes.
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-gray-50">
+                                    <td class="p-3 border">NN Hidden Layer (Backprop)</td>
+                                    <td class="p-3 border">$$a^{(l)} = f(W^{(l)}a^{(l-1)})$$</td>
+                                    <td class="p-3 border">(From Chain Rule)</td>
+                                    <td class="p-3 border">$$\delta^{(l)}(a^{(l-1)})^T$$</td>
+                                    <td class="p-3 border">Calculates intermediate features; gradient comes from later
+                                        layers.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
 
                 <!-- Part 4: Ensemble Methods -->
                 <section id="ensemble" class="content-section fade-in-section p-6 md:p-8 lg:p-10">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Part 4: Ensemble Methods</h2>
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">7. Ensemble Learning</h3>
-                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Bagging (Bootstrap Aggregating) – Key Points</h4>
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Bagging (Bootstrap Aggregating) – Key
+                        Points</h4>
                     <ul class="list-disc list-inside space-y-2 text-sm">
                         <li><strong>Objective:</strong> Reduce variance (reduce overfitting).</li>
                         <li><strong>Base learner:</strong> Usually deep decision trees (high variance models).</li>
                         <li><strong>Execution:</strong> Parallel (each tree is independent).</li>
                         <li><strong>Sampling:</strong> Bootstrap sampling (sampling with replacement).</li>
-                        <li><strong>Combination:</strong> Average (for regression) / Majority voting (for classification).</li>
+                        <li><strong>Combination:</strong> Average (for regression) / Majority voting (for
+                            classification).</li>
                         <li><strong>Famous Example:</strong> Random Forest.</li>
                         <li><strong>Bias/Variance:</strong> Bias stays the same, variance is reduced.</li>
-                        <li><strong>Probability of a point in a bag:</strong><div class="text-center mt-2">$$1 - (1 - 1/n)^n \approx 1 - 1/e \approx 0.632$$</div></li>
+                        <li><strong>Probability of a point in a bag:</strong>
+                            <div class="text-center mt-2">$$1 - (1 - 1/n)^n \approx 1 - 1/e \approx 0.632$$</div>
+                        </li>
                     </ul>
-                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Boosting (e.g. AdaBoost) – Key Points</h4>
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Boosting (e.g. AdaBoost) – Key Points</h4>
                     <ul class="list-disc list-inside space-y-2 text-sm">
                         <li><strong>Objective:</strong> Reduce bias (make a weak learner strong).</li>
                         <li><strong>Base learner:</strong> Weak learners (e.g., decision stumps).</li>
-                        <li><strong>Execution:</strong> Sequential (next model learns from the previous one's errors).</li>
-                        <li><strong>Weighting:</strong> Misclassified points get higher weight in the next iteration.</li>
+                        <li><strong>Execution:</strong> Sequential (next model learns from the previous one's errors).
+                        </li>
+                        <li><strong>Weighting:</strong> Misclassified points get higher weight in the next iteration.
+                        </li>
                         <li><strong>Combination:</strong> Weighted vote of weak learners.</li>
                         <li><strong>Famous Examples:</strong> AdaBoost, Gradient Boosting, XGBoost, LightGBM.</li>
                         <li><strong>Bias/Variance:</strong> Bias is reduced, variance might increase slightly.</li>
-                        <li><strong>Overfitting:</strong> Sensitive to noise/outliers (because their weights are repeatedly increased).</li>
+                        <li><strong>Overfitting:</strong> Sensitive to noise/outliers (because their weights are
+                            repeatedly increased).</li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">AdaBoost Formulas</h4>
-                    <ul class="space-y-8">
-                        <li><strong>Classifier Weight:</strong><div class="text-center mt-2">$$\alpha_t = \frac{1}{2} \ln(\frac{1 - \epsilon_t}{\epsilon_t})$$</div></li>
-                        <li><strong>Data Weight Update:</strong><div class="text-center mt-2">$$D_{t+1}(i) \propto D_t(i) \exp(-\alpha_t y_i h_t(x_i))$$</div></li>
-                        <li><strong>Final Classifier:</strong><div class="text-center mt-2">$$H(x) = \text{sign}\left(\sum_{t=1}^{T} \alpha_t h_t(x)\right)$$</div></li>
-                    </ul>
+
+                    <div class="mt-4 space-y-6">
+                        <!-- Classifier Weight -->
+                        <div>
+                            <h5 class="text-lg font-semibold">Classifier Weight</h5>
+                            <div class="text-center mt-2">$$\displaystyle \alpha_t =
+                                \tfrac{1}{2}\ln\!\left(\dfrac{1-\epsilon_t}{\epsilon_t}\right)$$</div>
+                            <p class="text-sm mt-2">Simple words: agar weak learner ka <strong>error</strong> chhota hai
+                                → <strong>\(\alpha_t\)</strong> bada (zyada importance).</p>
+                        </div>
+
+                        <!-- Data Weight Update -->
+                        <div>
+                            <h5 class="text-lg font-semibold">Data Weight Update</h5>
+                            <div class="text-center mt-2">$$\displaystyle D_{t+1}(i) \propto
+                                D_t(i)\,\exp\big(-\alpha_t\,y_i\,h_t(x_i)\big)$$</div>
+                            <div class="text-center mt-2">or (explicit unnormalized form):</div>
+                            <div class="text-center mt-2">$$
+                                \tilde{D}_t(i)=
+                                \begin{cases}
+                                e^{+\alpha_t}\,D_{t-1}(i), & h_t(x_i)\neq y_i\quad\text{(mistake)}\\[6pt]
+                                e^{-\alpha_t}\,D_{t-1}(i), & h_t(x_i)=y_i\quad\text{(correct)}
+                                \end{cases}
+                                $$</div>
+                            <div class="text-center mt-2">Normalize: $$\displaystyle
+                                D_t(i)=\dfrac{\tilde{D}_t(i)}{\sum_{j=1}^n \tilde{D}_t(j)}$$</div>
+                            <p class="text-sm mt-2">Simple words: <strong>correct</strong> points → weight ↓,
+                                <strong>wrong</strong> points → weight ↑ (next round pe zyada focus).</p>
+                        </div>
+
+                        <!-- Final Classifier -->
+                        <div>
+                            <h5 class="text-lg font-semibold">Final Classifier</h5>
+                            <div class="text-center mt-2">$$\displaystyle H(x)=\operatorname{sign}\!\Big(\sum_{t=1}^T
+                                \alpha_t\,h_t(x)\Big)$$</div>
+                            <p class="text-sm mt-2">Simple words: sab weak classifiers ka weighted vote — jiska weight
+                                \(\alpha_t\) zyada, uska vote zyada count hota hai.</p>
+                        </div>
+
+                        <!-- Short summary / analogy -->
+                        <div>
+                            <h5 class="text-lg font-semibold">Short Summary (Easy)</h5>
+                            <ul class="list-disc list-inside ml-4 mt-2 text-sm space-y-1">
+                                <li>\(\epsilon_t\) = weighted error of weak learner \(h_t\).</li>
+                                <li>\(\alpha_t\) = importance of \(h_t\) (better learner → larger \(\alpha_t\)).</li>
+                                <li>Update weights so that misclassified points get higher weight for the next round.
+                                </li>
+                                <li>Final decision is a weighted majority vote of all weak learners.</li>
+                            </ul>
+                            <p class="text-sm mt-2">Analogy: weak players practice on mistakes and better players get
+                                more influence in the team decision.</p>
+                        </div>
+                    </div>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">AdaBoost Worked Example</h4>
-                    <p>Consider a dataset of 4 samples: $$(A,+1), (B,+1), (C,-1), (D,-1)$$. Initially, all weights are equal: $$D_1(i)=0.25$$</p>
+                    <p>Consider a dataset of 4 samples: $$(A,+1), (B,+1), (C,-1), (D,-1)$$. Initially, all weights are
+                        equal: $$D_1(i)=0.25$$</p>
                     <h5 class="text-lg">Round 1</h5>
                     <ul class="space-y-4 text-sm">
-                        <li><strong>Weak learner $h_1(x)$ predicts:</strong> $$[+1, -1, -1, -1]$$. Sample #2 is misclassified.</li>
+                        <li><strong>Weak learner $h_1(x)$ predicts:</strong> $$[+1, -1, -1, -1]$$. Sample #2 is
+                            misclassified.</li>
                         <li><strong>Error $\varepsilon_1$:</strong> $$0.25$$ (weight of misclassified sample).</li>
-                        <li><strong>Classifier weight $\alpha_1$:</strong> $$\tfrac{1}{2}\ln(\frac{1-0.25}{0.25}) = \tfrac{1}{2}\ln(3) \approx 0.549$$</li>
-                        <li><strong>Update weights:</strong> Multiply correct examples by $$e^{-\alpha_1} \approx 0.577$$ and wrong examples by $$e^{\alpha_1} \approx 1.732$$.</li>
-                        <li><strong>New Distribution $D_2$:</strong> After normalization, weights are approx. $$[0.167, 0.5, 0.167, 0.167]$$. Sample #2 now has the highest weight.</li>
+                        <li><strong>Classifier weight $\alpha_1$:</strong> $$\tfrac{1}{2}\ln(\frac{1-0.25}{0.25}) =
+                            \tfrac{1}{2}\ln(3) \approx 0.549$$</li>
+                        <li><strong>Update weights:</strong> Multiply correct examples by $$e^{-\alpha_1} \approx
+                            0.577$$ and wrong examples by $$e^{\alpha_1} \approx 1.732$$.</li>
+                        <li><strong>New Distribution $D_2$:</strong> After normalization, weights are approx. $$[0.167,
+                            0.5, 0.167, 0.167]$$. Sample #2 now has the highest weight.</li>
                     </ul>
                     <h5 class="text-lg">Round 2</h5>
                     <ul class="space-y-4 text-sm">
-                        <li><strong>Weak learner $h_2(x)$ predicts:</strong> $$[+1, +1, +1, -1]$$. Sample #3 is misclassified.</li>
+                        <li><strong>Weak learner $h_2(x)$ predicts:</strong> $$[+1, +1, +1, -1]$$. Sample #3 is
+                            misclassified.</li>
                         <li><strong>Error $\varepsilon_2$:</strong> $$D_2(3) = 0.167$$.</li>
-                        <li><strong>Classifier weight $\alpha_2$:</strong> $$\tfrac{1}{2}\ln(\frac{1-0.167}{0.167}) = \tfrac{1}{2}\ln(5) \approx 0.804$$</li>
+                        <li><strong>Classifier weight $\alpha_2$:</strong> $$\tfrac{1}{2}\ln(\frac{1-0.167}{0.167}) =
+                            \tfrac{1}{2}\ln(5) \approx 0.804$$</li>
                     </ul>
                     <h5 class="text-lg">Final Strong Classifier (after 2 rounds)</h5>
                     <div class="text-center mt-2">$$H(x)=\text{sign}(0.549 \cdot h_1(x)+0.804 \cdot h_2(x))$$</div>
@@ -364,27 +803,36 @@
                     <ul class="list-disc list-inside space-y-4">
                         <li><strong>High Bias Model (Underfitting):</strong>
                             <ul class="list-circle list-inside ml-4 mt-2">
-                                <li><strong>Training Error:</strong> High (Model can't even capture the pattern in the training data).</li>
+                                <li><strong>Training Error:</strong> High (Model can't even capture the pattern in the
+                                    training data).</li>
                                 <li><strong>Test Error:</strong> High (Model fails to generalize).</li>
                             </ul>
                         </li>
                         <li><strong>High Variance Model (Overfitting):</strong>
                             <ul class="list-circle list-inside ml-4 mt-2">
-                                <li><strong>Training Error:</strong> Low (Model has memorized the training data, including noise).</li>
-                                <li><strong>Test Error:</strong> High (Model does not generalize to new, unseen data).</li>
+                                <li><strong>Training Error:</strong> Low (Model has memorized the training data,
+                                    including noise).</li>
+                                <li><strong>Test Error:</strong> High (Model does not generalize to new, unseen data).
+                                </li>
                             </ul>
                         </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Model Complexity</h4>
                     <ul class="list-disc list-inside space-y-4">
-                        <li>The relationship between model complexity and error is U-shaped (this is the bias-variance tradeoff).</li>
+                        <li>The relationship between model complexity and error is U-shaped (this is the bias-variance
+                            tradeoff).</li>
                         <li><strong>Low complexity:</strong> Underfitting → high training error, high test error.</li>
                         <li><strong>Moderate complexity:</strong> Best generalization → low test error.</li>
-                        <li><strong>Very high complexity:</strong> Overfitting → low training error, but high test error.</li>
-                        <li>✅ <strong>Increasing complexity always decreases training error (or keeps it the same).</strong> A more complex model can always mimic a simpler one.</li>
-                        <li>❌ <strong>Increasing complexity does NOT always decrease test error.</strong> It only does so up to the optimal point, after which test error increases due to overfitting.</li>
-                        <li>✅ <strong>With infinite training data, more complexity will not harm test error.</strong> In theory, enough data prevents overfitting.</li>
-                        <li>✅ <strong>With fixed small data, simpler models may outperform complex ones</strong> because they avoid overfitting.</li>
+                        <li><strong>Very high complexity:</strong> Overfitting → low training error, but high test
+                            error.</li>
+                        <li>✅ <strong>Increasing complexity always decreases training error (or keeps it the
+                                same).</strong> A more complex model can always mimic a simpler one.</li>
+                        <li>❌ <strong>Increasing complexity does NOT always decrease test error.</strong> It only does
+                            so up to the optimal point, after which test error increases due to overfitting.</li>
+                        <li>✅ <strong>With infinite training data, more complexity will not harm test error.</strong> In
+                            theory, enough data prevents overfitting.</li>
+                        <li>✅ <strong>With fixed small data, simpler models may outperform complex ones</strong> because
+                            they avoid overfitting.</li>
                     </ul>
                 </section>
 
@@ -394,15 +842,25 @@
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">8. Core Formulas & Architecture</h3>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Computation at a Neuron</h4>
                     <ul class="space-y-8">
-                        <li><strong>Pre-activation (Linear Combination):</strong><div class="text-center mt-2">$$z = w^T x + b$$</div></li>
-                        <li><strong>Activation (Non-linear Function):</strong><div class="text-center mt-2">$$a = g(z)$$</div></li>
+                        <li><strong>Pre-activation (Linear Combination):</strong>
+                            <div class="text-center mt-2">$$z = w^T x + b$$</div>
+                        </li>
+                        <li><strong>Activation (Non-linear Function):</strong>
+                            <div class="text-center mt-2">$$a = g(z)$$</div>
+                        </li>
                     </ul>
-                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">General Formula for Parameters in a Layer</h4>
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">General Formula for Parameters in a Layer
+                    </h4>
                     <ul class="space-y-8">
-                        <li><strong>Parameters in layer l:</strong><div class="text-center mt-2">$$ (n_{in} \times n_{out}) + n_{out} $$</div></li>
-                        <li class="text-sm">Where $$n_{in}$$ is the number of inputs to the layer (e.g., from previous layer's neurons) and $$n_{out}$$ is the number of neurons in the current layer. The first term represents weights and the second term represents biases.</li>
+                        <li><strong>Parameters in layer l:</strong>
+                            <div class="text-center mt-2">$$ (n_{in} \times n_{out}) + n_{out} $$</div>
+                        </li>
+                        <li class="text-sm">Where $$n_{in}$$ is the number of inputs to the layer (e.g., from previous
+                            layer's neurons) and $$n_{out}$$ is the number of neurons in the current layer. The first
+                            term represents weights and the second term represents biases.</li>
                     </ul>
-                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Step-by-step Parameter Calculation Example</h4>
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Step-by-step Parameter Calculation Example
+                    </h4>
                     <p><strong>Architecture:</strong> Input: 5 → Hidden-1: 10 → Hidden-2: 10 → Output: 1</p>
                     <ul class="space-y-4 text-sm">
                         <li><strong>Layer 1 (Input to Hidden-1):</strong>
@@ -434,46 +892,69 @@
                             </ul>
                         </li>
                     </ul>
-                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Common Activation Functions (Hidden Layers)</h4>
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Common Activation Functions (Hidden
+                        Layers)</h4>
                     <ul class="space-y-8">
-                        <li><strong>ReLU (Rectified Linear Unit):</strong><div class="text-center mt-2">$$g(z) = \max(0, z)$$</div></li>
-                        <li><strong>Sigmoid:</strong><div class="text-center mt-2">$$g(z) = \frac{1}{1 + e^{-z}}$$</div></li>
+                        <li><strong>ReLU (Rectified Linear Unit):</strong>
+                            <div class="text-center mt-2">$$g(z) = \max(0, z)$$</div>
+                        </li>
+                        <li><strong>Sigmoid:</strong>
+                            <div class="text-center mt-2">$$g(z) = \frac{1}{1 + e^{-z}}$$</div>
+                        </li>
                     </ul>
-                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Output Layer Activation for Multi-Class</h4>
-                     <ul class="space-y-8">
-                        <li><strong>Softmax:</strong><div class="text-center mt-2">$$\text{Softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$$</div></li>
-                        <li class="text-sm">Use this in the output layer for multi-class classification. It converts a vector of raw scores (logits) into a vector of probabilities that sum to 1.</li>
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Output Layer Activation for Multi-Class
+                    </h4>
+                    <ul class="space-y-8">
+                        <li><strong>Softmax:</strong>
+                            <div class="text-center mt-2">$$\text{Softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K}
+                                e^{z_j}}$$</div>
+                        </li>
+                        <li class="text-sm">Use this in the output layer for multi-class classification. It converts a
+                            vector of raw scores (logits) into a vector of probabilities that sum to 1.</li>
                     </ul>
-                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Output Layer & Loss (When to use which)</h4>
+                    <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Output Layer & Loss (When to use which)
+                    </h4>
                     <ul class="list-disc list-inside space-y-8">
                         <li><strong>For Regression Problems:</strong>
                             <ul class="list-circle list-inside ml-4 mt-2 space-y-2">
-                                <li><strong>Output Layer Activation:</strong> Linear / Identity (i.e., no activation function).</li>
-                                <li><strong>Loss Function:</strong> Mean Squared Error.<div class="text-center mt-2">$$L = (y - \hat{y})^2$$</div></li>
+                                <li><strong>Output Layer Activation:</strong> Linear / Identity (i.e., no activation
+                                    function).</li>
+                                <li><strong>Loss Function:</strong> Mean Squared Error.<div class="text-center mt-2">$$L
+                                        = (y - \hat{y})^2$$</div>
+                                </li>
                             </ul>
                         </li>
                         <li><strong>For Binary Classification Problems:</strong>
                             <ul class="list-circle list-inside ml-4 mt-2 space-y-2">
                                 <li><strong>Output Layer Activation:</strong> Sigmoid.</li>
-                                <li><strong>Loss Function:</strong> Binary Cross-Entropy.<div class="text-center mt-2">$$L = -[y \log(\hat{y}) + (1-y)\log(1-\hat{y})]$$</div></li>
-                                <li><strong>Best Practice:</strong> Use the sigmoid (logistic) activation on the single output unit, because it maps the output to [0,1] and gives a probability for the positive class.</li>
+                                <li><strong>Loss Function:</strong> Binary Cross-Entropy.<div class="text-center mt-2">
+                                        $$L = -[y \log(\hat{y}) + (1-y)\log(1-\hat{y})]$$</div>
+                                </li>
+                                <li><strong>Best Practice:</strong> Use the sigmoid (logistic) activation on the single
+                                    output unit, because it maps the output to [0,1] and gives a probability for the
+                                    positive class.</li>
                             </ul>
                         </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Training (Backward Pass)</h4>
                     <ul class="space-y-8">
-                        <li><strong>Gradient Descent Update:</strong><div class="text-center mt-2">$$\theta^{(t+1)} = \theta^{(t)} - \eta \nabla L_{\theta^{(t)}}$$</div></li>
+                        <li><strong>Gradient Descent Update:</strong>
+                            <div class="text-center mt-2">$$\theta^{(t+1)} = \theta^{(t)} - \eta \nabla
+                                L_{\theta^{(t)}}$$</div>
+                        </li>
                     </ul>
                 </section>
 
                 <!-- Part 7: Visualization -->
                 <section id="visualization" class="content-section fade-in-section p-6 md:p-8 lg:p-10">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Part 7: Loss Function Visualization</h2>
-                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">Interactive Loss Function Graph</h3>
-                     <p class="mb-6">This graph visualizes the different convex surrogate loss functions used in classification, plotted against the margin score $$u = y(w^T x)$$. Hover over the lines to compare their penalties.</p>
-                     <div class="mt-8">
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">Interactive Loss Function Graph</h3>
+                    <p class="mb-6">This graph visualizes the different convex surrogate loss functions used in
+                        classification, plotted against the margin score $$u = y(w^T x)$$. Hover over the lines to
+                        compare their penalties.</p>
+                    <div class="mt-8">
                         <canvas id="lossChart"></canvas>
-                     </div>
+                    </div>
                 </section>
             </main>
         </div>
@@ -484,12 +965,12 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Render Math
             renderMathInElement(document.body, {
                 delimiters: [
-                    {left: '$$', right: '$$', display: true},
-                    {left: '$', right: '$', display: false}
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false }
                 ]
             });
 
@@ -505,7 +986,7 @@
             document.querySelectorAll('.fade-in-section').forEach(section => {
                 observer.observe(section);
             });
-            
+
             // Active link highlighting for TOC
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.toc a');
@@ -532,7 +1013,7 @@
 
             // Chart.js for Loss Function Graph
             const ctx = document.getElementById('lossChart');
-            if(ctx) {
+            if (ctx) {
                 const labels = [];
                 const squaredData = [];
                 const hingeData = [];
@@ -643,7 +1124,7 @@
                 mobileMenu.classList.toggle('hidden');
                 mobileMenuButton.textContent = mobileMenu.classList.contains('hidden') ? 'Show Navigation' : 'Hide Navigation';
             });
-            
+
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
@@ -653,4 +1134,5 @@
         });
     </script>
 </body>
+
 </html>
