@@ -161,6 +161,11 @@
                         <li><strong>Reconstruction Error:</strong><div class="text-center mt-2">$$\frac{1}{n}\sum||x_i - x_{i,recon}||^2 = \sum_{j=k+1}^{d}\lambda_j$$</div></li>
                         <li><strong>Total Variance:</strong><div class="text-center mt-2">$$\text{Trace}(C) = \sum_{j=1}^{d}\lambda_j$$</div></li>
                         <li><strong>Proportion of Variance Captured:</strong><div class="text-center mt-2">$$\frac{\sum_{j=1}^{k}\lambda_j}{\sum_{j=1}^{d}\lambda_j}$$</div></li>
+                        <li><strong>Key Point on Eigenvectors:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-sm">
+                                <li>An eigenvector represents a direction. If a vector $$v$$ is an eigenvector of a matrix, then any non-zero scalar multiple of that vector (e.g., $$c \cdot v$$) is also a valid eigenvector for the same eigenvalue.</li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">2. K-Means Clustering</h3>
@@ -219,7 +224,7 @@
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">5. Regression Models</h3>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Linear Regression</h4>
                     <ul class="space-y-8">
-                        <li><strong>Model:</strong><div class="text-center mt-2">$$\hat{y} = w^T x + b$$</div><p class="text-center text-xs mt-2 italic text-gray-500">Note: Ignore 'b' Bias term</p></li>
+                        <li><strong>Model:</strong><div class="text-center mt-2">$$\hat{y} = w^T x + b$$</div><p class="text-center text-xs mt-2 italic text-gray-500">(note: ignore 'b' bias term).</p></li>
                         <li><strong>Loss (SSE):</strong><div class="text-center mt-2">$$L(w) = \frac{1}{2} ||X^T w - y||^2$$</div></li>
                         <li><strong>Gradient of SSE:</strong><div class="text-center mt-2">$$\nabla_w L(w) = XX^T w - Xy$$</div></li>
                         <li><strong>Normal Equations (Solution):</strong><div class="text-center mt-2">$$\hat{w} = (XX^T)^{-1}Xy$$</div></li>
@@ -230,6 +235,12 @@
                         <li><strong>Ridge Solution:</strong><div class="text-center mt-2">$$\hat{w}_{ridge} = (XX^T + \lambda I)^{-1}Xy$$</div></li>
                         <li><strong>LASSO (L1) Loss:</strong><div class="text-center mt-2">$$L_{LASSO}(w) = \text{SSE} + \lambda ||w||_1$$</div></li>
                     </ul>
+                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Ridge vs. Lasso Comparison</h4>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li><strong>Ridge:</strong> “Shrink everything but keep all features.” All coefficients shrink smoothly toward 0, but never become exactly 0.</li>
+                        <li><strong>Lasso:</strong> “Kill some features completely, keep only important ones.” Some coefficients become exactly 0 (feature selection).</li>
+                    </ul>
+                    <div class="overflow-x-auto mt-4"><table class="w-full text-left border-collapse"><thead><tr class="bg-violet-50"><th class="p-3 border">Feature</th><th class="p-3 border">Ridge Regression</th><th class="p-3 border">Lasso Regression</th></tr></thead><tbody><tr class="odd:bg-gray-50"><td class="p-3 border">Penalty</td><td class="p-3 border">L2 norm: $$\lambda \sum w_j^2$$</td><td class="p-3 border">L1 norm: $$\lambda \sum |w_j|$$</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Effect of increasing $$\lambda$$</td><td class="p-3 border">All coefficients shrink towards 0</td><td class="p-3 border">Some coefficients become exactly 0</td></tr></tbody></table></div>
 
                     <h3 class="text-2xl sm:text-3xl font-semibold text-gray-700">6. Classification Models</h3>
                      <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Loss Functions Table</h4>
@@ -264,20 +275,21 @@
                         <li><strong>Margin (γ):</strong><div class="text-center mt-2">$$\gamma = \min_i \frac{y_i(w^T x_i)}{||w||}$$</div></li>
                         <li class="text-sm">The minimum distance of any point from the separating hyperplane. Intuitively, it's how well-separated the two classes are. Larger γ → fewer mistakes.</li>
                         <li><strong>Mistake Bound:</strong><div class="text-center mt-2">$$t \le \left(\frac{R}{\gamma}\right)^2$$</div></li>
-                        <li><strong>Key Point:</strong>
+                        <li><strong>Key Points:</strong>
                             <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-sm">
+                                <li>The Perceptron algorithm will only converge if the dataset is linearly separable.</li>
                                 <li>The weight vector output by the perceptron algorithm can be expressed as a linear combination of the data-points where the coefficients of the linear combination are integers.</li>
                             </ul>
                         </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Support Vector Machines (SVM)</h4>
                     <ul class="space-y-8">
-                        <li><strong>Geometric Margin:</strong><div class="text-center mt-2">$$\gamma_i = \frac{y_i(w^T x_i + b)}{||w||}$$</div><p class="text-center text-xs mt-2 italic text-gray-500">Note: Ignore 'b' Bias term.</p></li>
-                        <li><strong>Hard-Margin Primal:</strong><div class="text-center mt-2">$$\min_w \frac{1}{2}||w||^2 \quad \text{s.t.} \quad y_i(w^T x_i + b) \ge 1$$</div><p class="text-center text-xs mt-2 italic text-gray-500">Note: Ignore 'b' Bias term.</p></li>
-                        <li><strong>Soft-Margin Primal:</strong><div class="text-center mt-2">$$\min_{w, \xi} \frac{1}{2}||w||^2 + C \sum \xi_i \quad \text{s.t.} \quad y_i(w^T x_i + b) \ge 1 - \xi_i, \xi_i \ge 0$$</div><p class="text-center text-xs mt-2 italic text-gray-500">Note: Ignore 'b' Bias term.</p></li>
+                        <li><strong>Geometric Margin:</strong><div class="text-center mt-2">$$\gamma_i = \frac{y_i(w^T x_i + b)}{||w||}$$</div><p class="text-center text-xs mt-2 italic text-gray-500">(note: ignore 'b' bias term)</p></li>
+                        <li><strong>Hard-Margin Primal:</strong><div class="text-center mt-2">$$\min_w \frac{1}{2}||w||^2 \quad \text{s.t.} \quad y_i(w^T x_i + b) \ge 1$$</div><p class="text-center text-xs mt-2 italic text-gray-500">(note: ignore 'b' bias term)</p></li>
+                        <li><strong>Soft-Margin Primal:</strong><div class="text-center mt-2">$$\min_{w, \xi} \frac{1}{2}||w||^2 + C \sum \xi_i \quad \text{s.t.} \quad y_i(w^T x_i + b) \ge 1 - \xi_i, \xi_i \ge 0$$</div><p class="text-center text-xs mt-2 italic text-gray-500">(note: ignore 'b' bias term)</p></li>
                         <li><strong>Dual Objective:</strong><div class="text-center mt-2">$$\max_{0 \le \alpha_i \le C} \sum \alpha_i - \frac{1}{2} \sum_i \sum_j \alpha_i \alpha_j y_i y_j k(x_i, x_j)$$</div></li>
                         <li><strong>Weight Vector from Dual:</strong><div class="text-center mt-2">$$w^* = \sum_{i=1}^{n} \alpha_i^* y_i x_i$$</div></li>
-                        <li><strong>Prediction with Kernels:</strong><div class="text-center mt-2">$$\hat{y}_{test} = \text{sign}\left(\sum_{i \in SVs} \alpha_i^* y_i k(x_i, x_{test}) + b\right)$$</div><p class="text-center text-xs mt-2 italic text-gray-500">Note: Ignore 'b' Bias term.</p></li>
+                        <li><strong>Prediction with Kernels:</strong><div class="text-center mt-2">$$\hat{y}_{test} = \text{sign}\left(\sum_{i \in SVs} \alpha_i^* y_i k(x_i, x_{test}) + b\right)$$</div><p class="text-center text-xs mt-2 italic text-gray-500">(note: ignore 'b' bias term)</p></li>
                         <li><strong>Total Margin Width:</strong><div class="text-center mt-2">$$\text{Total Margin} = \frac{2}{||w||}$$</div></li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Key KKT Conditions for SVM</h4>
@@ -294,7 +306,7 @@
                         </li>
                     </ul>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Soft-Margin SVM Case Table</h4>
-                    <p class="mb-4 text-sm">Where the margin value is defined as: $$m_i = y_i(\mathbf{w}^\top \mathbf{x}_i+b)$$ (Note: Ignore 'b' Bias term).</p>
+                    <p class="mb-4 text-sm">Where the margin value is defined as: $$m_i = y_i(\mathbf{w}^\top \mathbf{x}_i+b)$$ (note: ignore 'b' bias term).</p>
                     <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-violet-50"><th class="p-3 border">Case (Position)</th><th class="p-3 border">Margin Value $$m_i$$</th><th class="p-3 border">Slack $$\xi_i$$</th><th class="p-3 border">Dual $$\alpha_i$$</th><th class="p-3 border">Support Vector?</th><th class="p-3 border">Classification</th></tr></thead><tbody><tr class="odd:bg-gray-50"><td class="p-3 border">Outside margin</td><td class="p-3 border">$$m_i > 1$$</td><td class="p-3 border">0</td><td class="p-3 border">0</td><td class="p-3 border">No</td><td class="p-3 border">Correctly classified</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">On margin</td><td class="p-3 border">$$m_i = 1$$</td><td class="p-3 border">0</td><td class="p-3 border">$$0 < \alpha_i < C$$</td><td class="p-3 border">Yes</td><td class="p-3 border">Correctly classified</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Inside margin</td><td class="p-3 border">$$0 < m_i < 1$$</td><td class="p-3 border">$$1 - m_i$$</td><td class="p-3 border">C</td><td class="p-3 border">Yes</td><td class="p-3 border">Correctly classified</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">On decision boundary</td><td class="p-3 border">$$m_i = 0$$</td><td class="p-3 border">1</td><td class="p-3 border">C</td><td class="p-3 border">Yes</td><td class="p-3 border">Edge case</td></tr><tr class="odd:bg-gray-50"><td class="p-3 border">Misclassified point</td><td class="p-3 border">$$m_i < 0$$</td><td class="p-3 border">$$> 1$$</td><td class="p-3 border">C</td><td class="p-3 border">Yes</td><td class="p-3 border">Incorrectly classified</td></tr></tbody></table></div>
                     <h4 class="text-xl font-semibold mt-8 mb-2 text-gray-600">Effect of C in Soft Margin SVM</h4>
                     <p class="mb-4">The parameter C controls the trade-off between having a wide margin and correctly classifying training points. It's a way to manage the bias-variance tradeoff.</p>
